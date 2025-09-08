@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="font-poppins text-xl min-h-screen min-w-screen flex flex-col gap-16 items-center flex-nowrap bg-white px-16">
 
-       <nav className="w-full bg-red-200 py-4 flex justify-between">
+       <nav className="w-full py-4 flex justify-between">
           <a className="self-center font-normal text-black/90 text-2xl">logo</a>
           <button className="border-1 relative group inline-flex border-black/60 py-4 px-9 rounded-full text-[15px] text-black/90 font-normal cursor-pointer">
             <span className="group-hover:-translate-x-3 transition-all">contact us</span>
@@ -16,7 +16,7 @@ export default function Home() {
        {/* section one */}
       <section className="flex flex-col items-center text-black/90 w-full max-w-[950px]">
         {/* headline and button */}
-        <div className="flex flex-row justify-around gap-32 w-full">
+        <div className="flex flex-row justify-around w-full">
           <div>
             <h1 className="text-[40px] font-medium text-black/100 ">Fredza Agency</h1>
             <p className="text-[25px] text-black/95">Professional branding and marketing.</p>
@@ -58,27 +58,48 @@ export default function Home() {
 
       {/* section 2 */}
       <section className="flex gap-3 w-full px-16 justify-center max-w-[950px]">
-        <div className="flex flex-col gap-2 bg-[#F7F7F7] border-[1px] border-black/70 py-14 flex-1 items-center justify-center rounded-xl">
+        <div className="flex flex-col gap-2 border-[1px] border-black/70 py-12 flex-1 items-center justify-center rounded-xl">
           <div>
-            <h1 className="text-[40px] text-black/90 text-center font-medium">300+</h1>
-            <h1 className="text-[20px] text-black/90 text-center mt-2">Clients</h1>
+            <h1 className="text-[30px] text-black/90 text-center font-medium">300+</h1>
+            <h1 className="text-[19px] text-black/90 text-center mt-2">Clients</h1>
           </div>
         </div>
-        <div className="flex flex-col gap-2 bg-[#F7F7F7] border-[1px] border-black/70 py-14 flex-1 items-center justify-center rounded-xl">
+        <div className="flex flex-col gap-2  border-[1px] border-black/70 py-12 flex-1 items-center justify-center rounded-xl">
           <div>
-            <h1 className="text-[40px] text-black/90 text-center font-medium">4.1</h1>
-            <h1 className="text-[20px] text-black/90 text-center mt-2">rating</h1>
+            <h1 className="text-[30px] text-black/90 text-center font-medium">4.1</h1>
+            <h1 className="text-[19px] text-black/90 text-center mt-2">rating</h1>
           </div>
         </div>
-        <div className="flex flex-col gap-2 bg-[#F7F7F7] border-[1px] border-black/70 py-14 flex-1 items-center justify-center rounded-xl">
+        <div className="flex flex-col gap-2 border-[1px] border-black/70 py-12 flex-1 items-center justify-center rounded-xl">
           <div>
-            <h1 className="text-[40px] text-black/90 text-center font-medium">5+</h1>
-            <h1 className="text-[20px] text-black/90 text-center mt-2">YOE</h1>
+            <h1 className="text-[30px] text-black/90 text-center font-medium">5+</h1>
+            <h1 className="text-[19px] text-black/90 text-center mt-2">YOE</h1>
           </div>
         </div>
 
       </section>
-      <section className="mt-28 mb-32"></section>
+
+      {/* section 3 */}
+      <section className="mb-64 w-full py-8 max-w-[950px]">
+      <h1 className="text-[40px] font-medium text-black/100 mb-8 w-fit">
+        Our services
+      </h1>
+      <div className="w-fit py-2 px-2 rounded-2xl border-[1px] border-black/70 flex gap-2 mx-auto">
+
+        <div className="bg-[#303030] py-16 px-16 rounded-[8px] flex justify-center">
+          <span className="text-[25px] font-normal text-white">Branding</span>
+        </div>
+        <div className="bg-[#303030] py-16 px-16 rounded-[8px] flex justify-center">
+          <span className="text-[25px] font-normal text-white">Branding</span>
+        </div>
+        <div className="bg-[#303030] py-16 px-16 rounded-[8px] flex justify-center">
+          <span className="text-[25px] font-normal text-white">Branding</span>
+        </div>
+        <img src={"/downarrow.svg"} className="w-12 mr-2 -rotate-90"></img>
+
+
+      </div>
+      </section>
     </div>
   );
 }
