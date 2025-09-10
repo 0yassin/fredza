@@ -128,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* section 6 */}
-      <section className="mb-32 sm:mb-64 px-4 sm:px-0">
+      <section className="mb-48 px-4 sm:px-0">
         <h1 className="text-3xl sm:text-[40px] font-medium text-black/90 mb-6 sm:mb-8 text-center">
           Level up your brand right now
         </h1>
@@ -147,6 +147,7 @@ export default function Home() {
           </button>
         </div>
       </section>
+
 
     </div>
   );
