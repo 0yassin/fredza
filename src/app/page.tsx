@@ -21,9 +21,9 @@ export default function Home() {
   const yTransform = useTransform(scrollYProgress, [0, 1], [0, -20])
   const img1_x_t = useTransform(scrollYProgress, [0, 1], [-5, 0])
   const img2_x_t = useTransform(scrollYProgress, [0, 1], [5, 0])
-  const img3_x_t = useTransform(scrollYProgress, [0, 1], [-20, 0])
+  const img3_x_t = useTransform(scrollYProgress, [0, 1], [-30, 0])
   const img3_y_t = useTransform(scrollYProgress, [0, 1], [10, 0])
-  const img4_y_t = useTransform(scrollYProgress, [0, 1], [30, 0])
+  const img4_y_t = useTransform(scrollYProgress, [0, 1], [50, 0])
 
   // choose the value used in style based on ismobile
   const y = ismobile ? 0 : yTransform
@@ -50,7 +50,7 @@ export default function Home() {
   }
 
   return (
-    <div className="font-poppins text-xl min-h-screen flex flex-col gap-16 items-center bg-white px-6 sm:px-10 md:px-16">
+    <div className="font-poppins text-xl min-h-screen flex flex-col gap-16 items-center bg-[#fffaf0] px-6 sm:px-10 md:px-16">
       <ReactLenis root />
 
       {/* navbar */}
@@ -257,8 +257,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <motion.button
             className="border-1 relative group inline-flex border-black/60 py-3 mx-auto sm:mx-0 sm:py-4 px-7 sm:px-9 rounded-full text-base sm:text-[20px] text-black/90 font-normal cursor-pointer"
-            whileHover={ismobile ? {} : { y: -4, scale: 1.02 }}
-            whileTap={ismobile ? {} : { scale: 0.98 }}
+
             transition={{ type: "spring", damping: 14 }}
           >
             <span className="group-hover:-translate-x-3 transition-all">contact us</span>
@@ -268,12 +267,10 @@ export default function Home() {
             />
           </motion.button>
           <motion.button
-            className="border-1 relative group inline-flex bg-black/85 py-3 mx-auto sm:mx-0 sm:py-4 px-7 sm:px-9 rounded-md text-base sm:text-[20px] font-normal cursor-pointer"
-            whileHover={ismobile ? {} : { y: -4, scale: 1.02 }}
-            whileTap={ismobile ? {} : { scale: 0.98 }}
+            className="border-1 transition-all relative group inline-flex bg-black/85 py-3 mx-auto sm:mx-0 sm:py-4 px-7 sm:px-9 rounded-md text-base sm:text-[20px] hover:rounded-sm font-normal cursor-pointer"
             transition={{ type: "spring", damping: 14 }}
           >
-            <span className="group-hover:-translate-y-2 transition-all text-white">
+            <span className="transition-all text-white">
               contact us
             </span>
           </motion.button>
