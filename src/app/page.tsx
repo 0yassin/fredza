@@ -50,7 +50,7 @@ export default function Home() {
   }
 
   return (
-    <div className="font-poppins text-xl min-h-screen flex flex-col gap-16 items-center bg-[#fffaf0] px-6 sm:px-10 md:px-16">
+    <div className="font-poppins text-xl min-h-screen flex flex-col gap-16 items-center bg-[#FAFAFA] px-6 sm:px-10 md:px-16">
       <ReactLenis root />
 
       {/* navbar */}
