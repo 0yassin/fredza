@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ReactLenis, useLenis } from 'lenis/react'
 import 'lenis/dist/lenis.css'
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll, useTransform, Variant, Variants } from "framer-motion"
 import { useRef } from "react";
 
 export default function Home() {
@@ -39,12 +39,12 @@ export default function Home() {
   })
 
   // Variants used across sections
-  const sectionContainerVariants = {
+  const sectionContainerVariants:Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { when: "beforeChildren", staggerChildren: 0.12 } }
   }
 
-  const itemFadeUp = {
+  const itemFadeUp:Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { type: "spring", damping: 16, stiffness: 120 } }
   }
