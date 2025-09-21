@@ -235,17 +235,22 @@ export default function Home() {
           Recent Projects
         </motion.h1>
         <div className="grid grid-cols-3 sm:grid-cols-3 gap-2 max-w-[700px] mx-auto">
-          <motion.div variants={itemFadeUp} className="col-span-2 sm:col-span-2">
+
+          <motion.div variants={itemFadeUp} className=" relative col-span-2 sm:col-span-2">
             <img src={"/image 1.png"} className="object-cover w-full h-full rounded-xl" />
+            <h1 className="absolute text-white text-4xl font-semibold top-5 left-5 z-10">cool project</h1>
           </motion.div>
-          <motion.div variants={itemFadeUp}>
+          <motion.div variants={itemFadeUp} className="relative">
             <img src={"/image 1.png"} className="w-full h-full object-cover rounded-xl" />
+            {/* <h1 className="absolute text-white text-4xl font-semibold bottom-5 left-3 z-10">cool project</h1> */}
           </motion.div>
-          <motion.div variants={itemFadeUp}>
+          <motion.div variants={itemFadeUp} className="relative">
             <img src={"/image 1.png"} className="w-full h-full object-cover rounded-xl" />
+            {/* <h1 className="absolute text-white text-4xl font-semibold bottom-5 left-3 z-10">cool project</h1> */}
           </motion.div>
-          <motion.div variants={itemFadeUp} className="col-span-2 sm:col-span-2">
+          <motion.div variants={itemFadeUp} className="col-span-2 sm:col-span-2 relative">
             <img src={"/image 1.png"} className="w-full h-full object-cover rounded-xl" />
+            <h1 className="absolute text-white text-4xl font-semibold top-5 right-5 z-10">cool project</h1>
           </motion.div>
         </div>
       </motion.section>
