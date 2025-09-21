@@ -50,19 +50,19 @@ export default function Home() {
   }
 
   return (
-    <div className="font-poppins text-xl min-h-screen flex flex-col gap-16 items-center bg-[#FAFAFA] px-6 sm:px-10 md:px-16">
+    <div className="font-sans text-xl min-h-screen flex flex-col gap-16 items-center bg-[#FAFAFA] px-6 sm:px-10 md:px-16">
       <ReactLenis root />
 
       {/* navbar */}
       <motion.nav
         className="w-full py-4 flex justify-between items-center"
-        initial={ismobile ? {} : { opacity: 0, y: -10 }}
-        animate={ismobile ? {} : { opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45, ease: "easeOut" }}
       >
         <a className="font-normal text-black/90 text-xl sm:text-2xl">logo</a>
         <motion.button
-          className="border-1 relative group inline-flex border-black/60 py-2 sm:py-4 px-6 sm:px-9 rounded-full text-sm sm:text-[15px] text-black/90 font-normal cursor-pointer"
+          className="border-1 relative group inline-flex border-black/60 py-4 sm:py-4 px-9 sm:px-9 rounded-full text-[15px] sm:text-[15px] text-black/90 font-normal cursor-pointer"
           whileTap={{ scale: 0.98 }}
         >
           <span className="group-hover:-translate-x-3 transition-all">contact us</span>
@@ -77,22 +77,22 @@ export default function Home() {
       <section className="flex flex-col items-center text-black/90 w-full max-w-[950px] gap-8 sm:gap-12">
         {/* headline and button */}
         <motion.div
-          initial={ismobile ? {} : { y: -100, opacity: 0 }}
-          animate={ismobile ? {} : { y: 0, opacity: 1 }}
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, type: 'spring', damping: 13 }}
-          className="flex flex-col lg:flex-row justify-around items-start px-4 sm:px-0 lg:items-center gap-6 w-full"
+          className="flex flex-col md:flex-row justify-around items-start px-4 sm:px-0 lg:items-center gap-6 w-full"
         >
           <div>
             <h1 className="text-3xl sm:text-[40px] font-medium text-black/90 w-fit">
               Fredza Agency
             </h1>
-            <p className="text-lg sm:text-[25px] text-black/80 w-fit">
+            <p className="text-lg sm:text-[25px] font-sans text-black/80 w-fit">
               Professional branding and marketing.
             </p>
           </div>
 
           <motion.button
-            className="border-1 group h-fit w-fit relative border-black/90 py-3 sm:py-4 px-8 sm:px-9 rounded-full text-[15px] lg:py-5 lg:px-12 lg:text-[25px] text-black/90 font-normal cursor-pointer inline-flex"
+            className="border-1 group h-fit w-fit relative border-black/90 py-4 sm:py-4 px-9 sm:px-9 rounded-full text-[15px] md:py-5 md:px-12 md:text-[20px] text-black/90 font-normal cursor-pointer inline-flex"
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", damping: 14 }}
           >
@@ -109,8 +109,8 @@ export default function Home() {
           ref={img_grid}
           style={{ y: y }}
           className="grid grid-cols-2 md:grid-cols-5 grid-rows-2 md:grid-rows-2 w-full h-full p-4 sm:p-8 md:p-16 sm:pt-4 md:pt-4 pt-4 gap-3"
-          initial={ismobile ? {} : "hidden"}
-          whileInView={ismobile ? {} : "visible"}
+          initial={"hidden"}
+          whileInView={"visible"}
           viewport={{ once: true, amount: 0.2 }}
           variants={sectionContainerVariants}
         >
@@ -136,8 +136,8 @@ export default function Home() {
       <section className="flex flex-col sm:flex-row gap-3 w-full px-0 sm:px-4 lg:px-16 justify-center max-w-[950px]">
         <motion.div
           className="flex flex-col sm:flex-row gap-3 w-full"
-          initial={ismobile ? {} : "hidden"}
-          whileInView={ismobile ? {} : "visible"}
+          initial={ "hidden"}
+          whileInView={ "visible"}
           viewport={{ once: true, amount: 0.3 }}
           variants={{
             hidden: { opacity: 0 },
@@ -176,8 +176,8 @@ export default function Home() {
       {/* section 3 */}
       <motion.section
         className="w-full mt-16 max-w-[950px] px-4 sm:px-0"
-        initial={ismobile ? {} : "hidden"}
-        whileInView={ismobile ? {} : "visible"}
+        initial={"hidden"}
+        whileInView={ "visible"}
         viewport={{ once: true, amount: 0.2 }}
         variants={sectionContainerVariants}
       >
@@ -203,31 +203,38 @@ export default function Home() {
       {/* section 4 */}
       <motion.section
         className="w-full mt-16 max-w-[950px] px-4 sm:px-0"
-        initial={ismobile ? {} : { opacity: 0, y: 16 }}
-        whileInView={ismobile ? {} : { opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={ { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-3xl sm:text-[40px] font-medium text-black/90 mb-2 w-fit">
-          About us
-        </h1>
-        <p className="text-lg sm:text-[25px] text-black/75 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <div className="flex-col flex justify-center gap-4 sm:flex-row">
+          <div className="flex-[0.75]">
+            <h1 className="text-3xl sm:text-[40px] font-medium text-black/90 mb-2 w-fit">
+              About us
+            </h1>
+            <p className="text-lg tracking-wide sm:text-[25px] text-black/90">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div className="flex-1 object-cover max-w-[390px]">
+            <img src={"/image 1.png"} />
+          </div>
+        </div>
       </motion.section>
 
       {/* section 5 */}
       <motion.section
         className="w-full mt-8 max-w-[950px] mb-16 px-4 sm:px-0"
-        initial={ismobile ? {} : "hidden"}
-        whileInView={ismobile ? {} : "visible"}
+        initial={"hidden"}
+        whileInView={"visible"}
         viewport={{ once: true, amount: 0.2 }}
         variants={sectionContainerVariants}
       >
         <motion.h1 variants={itemFadeUp} className="text-3xl sm:text-[40px] font-medium text-black/90 w-fit mb-6 sm:mb-12">
           Recent Projects
         </motion.h1>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 max-w-[700px] mx-auto">
+        <div className="grid grid-cols-3 sm:grid-cols-3 gap-2 max-w-[700px] mx-auto">
           <motion.div variants={itemFadeUp} className="col-span-2 sm:col-span-2">
             <img src={"/image 1.png"} className="object-cover w-full h-full rounded-xl" />
           </motion.div>
@@ -245,8 +252,8 @@ export default function Home() {
 
       {/* section 6 */}
       <motion.section
-        initial={ismobile ? {} : { opacity: 0, y: 16 }}
-        whileInView={ismobile ? {} : { opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.5 }}
         className="mb-48 px-4 sm:px-0"
